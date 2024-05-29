@@ -1,18 +1,13 @@
 {
     "$schema": "https://railway.app/railway.schema.json",
     "build": {
-        "builder": "NIXPACKS"
+      "builder": "NIXPACKS"
     },
     "deploy": {
-        "numReplicas": 1,
-        "sleepApplication": false,
-        "restartPolicyType": "ON_FAILURE",
-        "restartPolicyMaxRetries": 10
-    },
-    "postBuild": [
-        "apt-get update",
-        "apt-get install -y nginx",
-        "cp nginx.conf /etc/nginx/nginx.conf"
-    ],
-    "start": "nginx -g 'daemon off;'"
-}
+      "numReplicas": 1,
+      "sleepApplication": false,
+      "restartPolicyType": "ON_FAILURE",
+      "restartPolicyMaxRetries": 10
+    }
+  }
+  
